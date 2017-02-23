@@ -12,6 +12,7 @@ header {
   padding-left: 2.5%;
   padding-right: 2.5%;
   background: white;
+  -webkit-font-smoothing: antialiased;
 }
 
 header section {
@@ -22,13 +23,6 @@ header section {
 header section ul {
   display: flex;
   align-items: center;
-}
-
-.nav-right img {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  padding-right: 0px;
 }
 
 .nav-left li {
@@ -45,6 +39,10 @@ header section ul {
   padding-top: 3px;
 }
 
+.nav-right li:first-child {
+  margin-right: 20px;
+}
+
 .nav-right button {
   font-size: 14px;
   background: $green;
@@ -52,10 +50,9 @@ header section ul {
 	padding: 8px 15px;
 	border-radius: 6px;
 	text-align: center;
-  box-shadow: 1.5px 1.5px 1.5px gray;
+  box-shadow: 1px 1px 1px gray;
   line-height: 1;
-  white-space: nowrap;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .nav-right button:hover {
