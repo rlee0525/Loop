@@ -1,0 +1,11 @@
+.splash-page {
+  height: 2000px;
+  background-image: url("http://res.cloudinary.com/rlee0525/image/upload/v1487830390/splash_eyaraw.jpg");
+  // background-size: cover;
+  background-position: center;
+}
+
+.splash-overlay {
+  height: calc(100%);
+  background-color: rgba(0, 0, 0, 0.8);
+}
