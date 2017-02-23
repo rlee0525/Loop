@@ -1,4 +1,4 @@
-import SessionForm from './navbar';
+import SessionForm from './session_form';
 import { connect } from 'react-redux';
 import { signup, login, logout } from '../../actions/session_actions';
 

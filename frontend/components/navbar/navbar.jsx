@@ -5,10 +5,12 @@ import FontAwesome from 'react-fontawesome';
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
+
+    this.goToSignIn = this.goToSignIn.bind(this);
   }
 
   goToSignIn() {
-
+    this.props.router.push("/signup");
   }
 
   demoLogin() {
