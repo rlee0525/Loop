@@ -12,7 +12,9 @@ class Splash extends React.Component {
 
     return (
       <div className="splash-page">
-        
+        <div className="splash-overlay">
+
+        </div>
       </div>
     );
   }
