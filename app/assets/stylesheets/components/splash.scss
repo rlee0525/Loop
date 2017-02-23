@@ -1,13 +1,11 @@
 .splash-page {
-  height: 949px;
-  // height: 100%;
+  height: 100vh;
   background-image: url("http://res.cloudinary.com/rlee0525/image/upload/v1487840722/Splash_og38pc.png");
   background-size: cover;
   background-position: center;
-  overflow: hidden;
 }
 
 .splash-overlay {
-  height: calc(100%);
+  height: 100%;
   background-color: rgba(255, 255, 255, 0.5);
 }
