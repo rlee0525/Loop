@@ -18,13 +18,7 @@ class Navbar extends React.Component {
     this.props.router.push("/signup");
   }
 
-  demoLogin() {
-
-  }
-
   searchable() {
-    let { currentUser } = this.props;
-
     return (
       <ul>
         <li><Link to="/players">All Players</Link></li>
@@ -34,8 +28,6 @@ class Navbar extends React.Component {
   }
 
   isLoggedIn() {
-    let { currentUser } = this.props;
-
     return (
       <ul>
         <li><button onClick={this.signOut}>Sign Out</button></li>
@@ -44,24 +36,23 @@ class Navbar extends React.Component {
   }
 
   isLoggedOut() {
-    let { currentUser, logout } = this.props;
-
     return (
       <ul>
         <li><button onClick={this.goToSignIn}>Sign In</button></li>
-        <li><button onClick={this.demoLogin}>Demo</button></li>
+        <li><button onClick={this.goToSignIn}>Demo</button></li>
       </ul>
     );
   }
 
   render() {
-    let { currentUser } = this.props;
+    let currentUser = this.props.currentUser;
+    console.log(this.props);
 
     return (
       <header>
         <section className="nav-left">
           <span><Link to="/"><img id="logo" src="http://res.cloudinary.com/rlee0525/image/upload/c_scale,h_25/v1487826027/Logo_rovpdx.png"/></Link></span>
-          { currentUser ? this.searchable() : "" }
+          { currentUser && this.searchable() }
         </section>
 
         <section className="nav-right">

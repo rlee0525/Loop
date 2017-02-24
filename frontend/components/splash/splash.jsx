@@ -5,6 +5,12 @@ import FontAwesome from 'react-fontawesome';
 class Splash extends React.Component {
   constructor(props) {
     super(props);
+
+    this.goToSignUp = this.goToSignUp.bind(this);
+  }
+
+  goToSignUp() {
+    this.props.router.push("/signup");
   }
 
   render() {
@@ -15,7 +21,8 @@ class Splash extends React.Component {
         <div className="splash-overlay">
           <div className="banner">
             <h1>Find your match today</h1>
-            <button id="banner-button">Get started</button>
+            <button id="banner-button"
+                    onClick={this.goToSignUp}>Get started</button>
           </div>
         </div>
       </div>
