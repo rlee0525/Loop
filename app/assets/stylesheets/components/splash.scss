@@ -7,5 +7,67 @@
 
 .splash-overlay {
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.banner {
+  position: absolute;
+  top: calc(50% - 75px);
+  height: 200px;
+  width: 100%;
+}
+
+.banner > h1, #banner-button {
+  text-align: center;
+  -webkit-animation: fadein 2.5s;
+     -moz-animation: fadein 2.5s;
+      -ms-animation: fadein 2.5s;
+       -o-animation: fadein 2.5s;
+          animation: fadein 2.5s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.banner > h1 {
+  font-size: 60px;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+
+#banner-button {
+  position: absolute;
+  left: calc(50% - 63.22px);
+  top: calc(70% - 20px);
+  font-size: 18px;
+  color: white;
+  align-self: center;
+  background-color: $green;
+  border-radius: 5px;
+  border-bottom: 2px solid black;
+  padding: 0.7em;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
 }
