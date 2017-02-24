@@ -19,11 +19,11 @@
 
 .banner > h1, #banner-button {
   text-align: center;
-  -webkit-animation: fadein 2.5s;
-     -moz-animation: fadein 2.5s;
-      -ms-animation: fadein 2.5s;
-       -o-animation: fadein 2.5s;
-          animation: fadein 2.5s;
+  -webkit-animation: fadein 2s;
+     -moz-animation: fadein 2s;
+      -ms-animation: fadein 2s;
+       -o-animation: fadein 2s;
+          animation: fadein 2s;
 }
 
 @keyframes fadein {
@@ -69,5 +69,9 @@
   border-bottom: 2px solid black;
   padding: 0.7em;
   -webkit-font-smoothing: antialiased;
+}
+
+#banner-button:hover {
   cursor: pointer;
+  background-color: $bright-green;
 }

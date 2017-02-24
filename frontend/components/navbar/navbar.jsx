@@ -7,6 +7,11 @@ class Navbar extends React.Component {
     super(props);
 
     this.goToSignIn = this.goToSignIn.bind(this);
+    this.signOut = this.signOut.bind(this);
+  }
+
+  signOut() {
+    this.props.logout();
   }
 
   goToSignIn() {
@@ -17,18 +22,30 @@ class Navbar extends React.Component {
 
   }
 
-  isLoggedIn() {
-  let { currentUser } = this.props;
+  searchable() {
+    let { currentUser } = this.props;
+
     return (
       <ul>
-        <li><button onClick={this.goToSignIn}>Sign In</button></li>
-        <li><button onClick={this.demoLogin}>Demo</button></li>
+        <li><Link to="/players">All Players</Link></li>
+        <li><Link to="/courts">All Courts</Link></li>
+      </ul>
+    );
+  }
+
+  isLoggedIn() {
+    let { currentUser } = this.props;
+
+    return (
+      <ul>
+        <li><button onClick={this.signOut}>Sign Out</button></li>
       </ul>
     );
   }
 
   isLoggedOut() {
-  let { currentUser, logout } = this.props;
+    let { currentUser, logout } = this.props;
+
     return (
       <ul>
         <li><button onClick={this.goToSignIn}>Sign In</button></li>
@@ -44,10 +61,7 @@ class Navbar extends React.Component {
       <header>
         <section className="nav-left">
           <span><Link to="/"><img id="logo" src="http://res.cloudinary.com/rlee0525/image/upload/c_scale,h_25/v1487826027/Logo_rovpdx.png"/></Link></span>
-          <ul>
-            <li><Link to="/players">All Players</Link></li>
-            <li><Link to="/courts">All Courts</Link></li>
-          </ul>
+          { currentUser ? this.searchable() : "" }
         </section>
 
         <section className="nav-right">

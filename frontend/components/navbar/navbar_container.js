@@ -2,7 +2,7 @@ import Navbar from './navbar';
 import { connect } from 'react-redux';
 import { signup, login, logout } from '../../actions/session_actions';
 
-const mapStateToProps = currentUser => ({
+const mapStateToProps = ({ currentUser }) => ({
   currentUser
 });
 

@@ -44,7 +44,7 @@ header section ul {
 }
 
 .nav-right {
-  padding-right: 40px;
+  padding-right: 20px;
 }
 
 .nav-right li:first-child {
@@ -64,6 +64,6 @@ header section ul {
 }
 
 .nav-right button:hover {
-  background: black;
+  background: $bright-green;
   cursor: pointer;
 }
