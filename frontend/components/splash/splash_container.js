@@ -1,8 +1,8 @@
 import Splash from './splash';
 import { connect } from 'react-redux';
 
-const mapStateToProps = currentUser => ({
-  currentUser
+const mapStateToProps = state => ({
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({

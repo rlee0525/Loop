@@ -46,8 +46,7 @@ class Navbar extends React.Component {
 
   render() {
     let currentUser = this.props.currentUser;
-    console.log(this.props);
-
+    
     return (
       <header>
         <section className="nav-left">

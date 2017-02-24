@@ -14,8 +14,6 @@ class Splash extends React.Component {
   }
 
   render() {
-    let { currentUser } = this.props;
-
     return (
       <div className="splash-page">
         <div className="splash-overlay">
