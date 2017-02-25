@@ -2,17 +2,43 @@
   height: 100vh;
   background-size: cover;
   background-position: center;
-}
 
-.login-box {
-  display: flex;
-  flex-direction: row;
-  top: calc(50% - 75px);
-  height: 200px;
-  width: 100%;
-}
+  .login-box {
+    display: flex;
+    flex-direction: row;
 
-.login-box-inputs {
-  display: flex;
-  flex-direction: column;
+    .login-box-instructions {
+      top: calc(50% - 25px);
+    }
+
+    .login-box-inputs {
+      display: flex;
+      flex-direction: column;
+
+      .login-input-field {
+        border-radius: 2px;
+      }
+
+      #sign-up-log-in-button {
+        background-color: $green;
+      }
+
+      #sign-up-log-in-button:hover {
+        background-color: $bright-green;
+        cursor: pointer;
+      }
+
+      #question-login {
+        font-size: 12px;
+      }
+
+      #status-toggle {
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      #status-toggle {
+
+      }
+    }
+  }
 }

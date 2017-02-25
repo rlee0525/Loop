@@ -116,8 +116,9 @@ class SessionForm extends React.Component {
             </label>
             <button id="sign-up-log-in-button"
                     type="submit">{buttonText}</button>
-            <button type="button" onClick={this.demoLogin}>DEMO</button>
-              {questionText}
+            <button id ="sign-up-log-in-button"
+                    type="button" onClick={this.demoLogin}>DEMO</button>
+            <p id="question-login">{questionText}</p>
             <button id="status-toggle"
                     onClick={this.toggleStatus}>{text}</button>
           </div>
