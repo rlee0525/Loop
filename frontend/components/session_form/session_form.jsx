@@ -90,37 +90,43 @@ class SessionForm extends React.Component {
     let text = this.state.loginPage ? "Sign Up" : "Login";
 
     return (
-      <div className="session-form">
-        <div className="login-box">
-          <div className="login-box-instruction">
-            "Hello"
-          </div>
-          <div className="login-box-inputs">
-            {this.props.errors ? this.renderErrors() : ""}
-            <label>
-              <input type="text"
-                placeholder="Username"
-                className="login-input-field"
-                value={this.state.username}
-                onChange={this.update('username')}
-                required />
-            </label>
+      <div className="background">
+        <div className="overlay">
+          <div className="session-form">
+            <div className="login-box">
+              <div className="login-box-instruction">
+                <h1>MatchUp</h1>
+                <div className="divide-line"></div>
+                <p>Sign up to find your tennis partner for a match!</p>
+              </div>
+              <div className="login-box-inputs">
+                {this.props.errors ? this.renderErrors() : ""}
+                <label>
+                  <input type="text"
+                    placeholder="Username"
+                    className="login-input-field"
+                    value={this.state.username}
+                    onChange={this.update('username')}
+                    required />
+                </label>
 
-            <label>
-              <input type="password"
-                placeholder="Password"
-                className="login-input-field"
-                value={this.state.password}
-                onChange={this.update('password')}
-                required />
-            </label>
-            <button id="sign-up-log-in-button"
-                    type="submit">{buttonText}</button>
-            <button id ="sign-up-log-in-button"
-                    type="button" onClick={this.demoLogin}>DEMO</button>
-            <p id="question-login">{questionText}</p>
-            <button id="status-toggle"
-                    onClick={this.toggleStatus}>{text}</button>
+                <label>
+                  <input type="password"
+                    placeholder="Password"
+                    className="login-input-field"
+                    value={this.state.password}
+                    onChange={this.update('password')}
+                    required />
+                </label>
+                <button id="sign-up-log-in-button"
+                        type="submit">{buttonText}</button>
+                <button id ="sign-up-log-in-button"
+                        type="button" onClick={this.demoLogin}>DEMO</button>
+                <p id="question-login">{questionText}</p>
+                <button id="status-toggle"
+                        onClick={this.toggleStatus}>{text}</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
