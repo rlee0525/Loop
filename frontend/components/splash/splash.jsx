@@ -20,6 +20,7 @@ class Splash extends React.Component {
   render() {
     return (
       <div className="splash-page">
+        <div className="gray-area"></div>
         <div className="splash-overlay">
           <div className="banner">
             <h1>Find your match today</h1>
@@ -27,6 +28,7 @@ class Splash extends React.Component {
                     onClick={this.goToSignUp}>Get started</button>
           </div>
         </div>
+        <div className="gray-area"></div>
       </div>
     );
   }
