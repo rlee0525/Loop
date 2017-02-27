@@ -18,19 +18,10 @@ class Navbar extends React.Component {
     this.props.router.push("/signup");
   }
 
-  searchBar() {
-    return (
-      <section className="nav-search-bar">
-        <input type="text"
-          placeholder="Search for a match"
-          className="search-bar" />
-      </section>
-    );
-  }
-
   isLoggedIn() {
     return (
       <ul>
+        <li><img id="profile-pic" src="http://res.cloudinary.com/rlee0525/image/upload/v1488163714/male_icon_x8didb.png" /></li>
         <li><button onClick={this.signOut}>Sign Out</button></li>
       </ul>
     );
@@ -51,14 +42,22 @@ class Navbar extends React.Component {
     return (
       <header>
         <section className="nav-left">
-          <span><Link to="/"><img id="logo" src="http://res.cloudinary.com/rlee0525/image/upload/c_scale,h_25/v1487826027/Logo_rovpdx.png"/></Link></span>
+          <span>
+            <Link to="/">
+              <img id="logo" src="http://res.cloudinary.com/rlee0525/image/upload/c_scale,h_25/v1487826027/Logo_rovpdx.png"/>
+            </Link>
+          </span>
           <ul>
             <li><Link to="/players">All Players</Link></li>
             <li><Link to="/courts">All Courts</Link></li>
           </ul>
         </section>
 
-        { currentUser && this.searchBar() }
+        <section className="nav-search-bar">
+          <input type="text"
+            placeholder="Search for a match"
+            className="search-bar" />
+        </section>
 
         <section className="nav-right">
           { currentUser ? this.isLoggedIn() : this.isLoggedOut()}

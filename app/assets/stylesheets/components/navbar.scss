@@ -38,13 +38,13 @@ header section ul {
   color: black;
 }
 
-.nav-left a:hover {
-  border-bottom: 2px solid $bright-green;
-}
-
 .nav-left span {
   padding-right: 11px;
   padding-top: 3px;
+}
+
+.nav-left a:hover {
+  color: $green;
 }
 
 .nav-right {
@@ -77,12 +77,13 @@ header section ul {
   position: relative;
   justify-content: center;
   max-width: 800px;
+  padding-right: 10px;
 }
 
 .search-bar {
   width: 90%;
   border-radius: 5px;
-  padding: 8px 15px 8px 30px;
+  padding: 8px 15px 8px 33px;
   border: 1px solid gray;
   font-size: 12px;
   box-shadow: 0.5px 0.5px 0.5px gray;
@@ -93,6 +94,15 @@ header section ul {
   content: "\f002";
   font-family: FontAwesome;
   color: gray;
-  top: 9px;
-  left: 3%;
+  top: 10px;
+  left: 3.5%;
+}
+
+#profile-pic {
+  width: 30px;
+  padding: 2px 20px 0 10px;
+}
+
+#profile-pic:hover {
+  cursor: pointer;
 }
