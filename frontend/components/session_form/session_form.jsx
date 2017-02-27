@@ -16,6 +16,10 @@ class SessionForm extends React.Component {
     this.toggleStatus = this.toggleStatus.bind(this);
   }
 
+  componentDidMount() {
+    this.props.clearErrors();
+  }
+
   update(property) {
     return e => this.setState({
       [property]: e.currentTarget.value

@@ -9,6 +9,10 @@ class Splash extends React.Component {
     this.goToSignUp = this.goToSignUp.bind(this);
   }
 
+  componentDidMount() {
+    this.props.clearErrors();
+  }
+
   goToSignUp() {
     this.props.router.push("/signup");
   }
