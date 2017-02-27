@@ -67,3 +67,28 @@ header section ul {
   background: $bright-green;
   cursor: pointer;
 }
+
+.nav-search-bar {
+  width: 50%;
+  position: relative;
+  justify-content: center;
+  max-width: 800px;
+}
+
+.search-bar {
+  width: 90%;
+  border-radius: 5px;
+  padding: 8px 15px 8px 30px;
+  border: 1px solid gray;
+  font-size: 12px;
+  box-shadow: 0.5px 0.5px 0.5px gray;
+}
+
+.nav-search-bar::before {
+  position: absolute;
+  content: "\f002";
+  font-family: FontAwesome;
+  color: gray;
+  top: 9px;
+  left: 3%;
+}

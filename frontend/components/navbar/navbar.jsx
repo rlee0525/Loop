@@ -27,6 +27,14 @@ class Navbar extends React.Component {
     );
   }
 
+  searchBar() {
+    return (
+      <input type="text"
+        placeholder="Search for a match"
+        className="search-bar" />
+    );
+  }
+
   isLoggedIn() {
     return (
       <ul>
