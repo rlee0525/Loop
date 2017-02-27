@@ -1,12 +1,12 @@
 .background {
   height: 100vh;
-  background-image: url("http://res.cloudinary.com/rlee0525/image/upload/v1487841618/splash_hd-min_datzif.jpg");
+  background-image: url("http://res.cloudinary.com/rlee0525/image/upload/v1488175153/tenniscourt-min_xurxdq.jpg");
   background-size: cover;
   background-position: center;
 
   .overlay {
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
+    // background-color: rgba(255, 255, 255, 0.5);
 
     .session-form {
       position: relative;
@@ -15,16 +15,15 @@
       display: flex;
 
       .login-box {
+        display: flex;
+        position: absolute;
         width: 600px;
         height: 440px;
-        position: absolute;
         top: calc(50% - 220px);
         left: calc(50% - 275px);
         background: white;
         border-radius: 5px;
-        display: flex;
-        box-sizing: border-box;
-        box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
 
         .login-box-instruction {
           display: flex;
@@ -33,17 +32,20 @@
           padding: 20px;
           justify-content: center;
           flex-direction: column;
-          background-color: $green;
+          background-color: $dark-red;
           border-top-left-radius: 5px;
           border-bottom-left-radius: 5px;
+          border: 1px solid black;
+          box-sizing: border-box;
 
           h1 {
             font-size: 30px;
+            color: white;
           }
 
           .divide-line {
             width: 50px;
-            border-bottom: 5px solid black;
+            border-bottom: 5px solid white;
             padding: 10px 0 10px 0;
           }
 
@@ -51,6 +53,7 @@
             margin-top: 20px;
             font-size: 13px;
             line-height: 1.5em;
+            color: white;
             -webkit-font-smoothing: antialiased;
           }
         }
@@ -65,9 +68,16 @@
           flex-direction: column;
           border-top-right-radius: 5px;
           border-bottom-right-radius: 5px;
+          border-top: 1px solid black;
+          border-right: 1px solid black;
+          border-bottom: 1px solid black;
 
           .login-input-field {
-            border-radius: 2px;
+            font-size: 15px;
+            height: 30px;
+            width: 250px;
+            margin-bottom: 10px;
+            padding-left: 5px;
           }
 
           #sign-up-log-in-button {
