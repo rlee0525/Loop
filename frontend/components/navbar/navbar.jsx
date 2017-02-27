@@ -46,12 +46,16 @@ class Navbar extends React.Component {
 
   render() {
     let currentUser = this.props.currentUser;
-    
+
     return (
       <header>
         <section className="nav-left">
           <span><Link to="/"><img id="logo" src="http://res.cloudinary.com/rlee0525/image/upload/c_scale,h_25/v1487826027/Logo_rovpdx.png"/></Link></span>
           { currentUser && this.searchable() }
+        </section>
+
+        <section className="nav-search-bar">
+          { currentUser && this.searchBar() }
         </section>
 
         <section className="nav-right">
