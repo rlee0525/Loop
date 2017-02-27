@@ -100,7 +100,9 @@ class SessionForm extends React.Component {
                 <p>Sign up to find your tennis partner for a match!</p>
               </div>
               <div className="login-box-inputs">
-                {this.props.errors ? this.renderErrors() : ""}
+                <div className="errors-container">
+                  {this.props.errors && this.renderErrors()}
+                </div>
                 <label>
                   <input type="text"
                     placeholder="Username"
@@ -119,8 +121,8 @@ class SessionForm extends React.Component {
                     required />
                 </label>
                 <div className="buttons">
-                  <button id="sign-up-log-in-button"
-                    type="submit">{buttonText}</button>
+                  <button id="sign-up-log-in-button" type="submit"
+                          onClick={this.handleSubmit}>{buttonText}</button>
                   <button id ="demo-button"
                     type="button" onClick={this.demoLogin}>DEMO</button>
                 </div>
