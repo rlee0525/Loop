@@ -6,7 +6,7 @@
 
   .overlay {
     height: 100%;
-    // background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
 
     .session-form {
       position: relative;
@@ -35,9 +35,6 @@
           background-color: $dark-red;
           border-top-left-radius: 5px;
           border-bottom-left-radius: 5px;
-          border-top: 1.5px solid black;
-          border-left: 1.5px solid black;
-          border-bottom: 1.5px solid black;
           box-sizing: border-box;
 
           h1 {
@@ -69,10 +66,6 @@
           align-items: center;
           flex-direction: column;
           border-top-right-radius: 5px;
-          border-bottom-right-radius: 5px;
-          border-top: 1.5px solid black;
-          border-right: 1.5px solid black;
-          border-bottom: 1.5px solid black;
           padding-top: 50px;
 
           .login-input-field {

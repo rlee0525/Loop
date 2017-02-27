@@ -1,14 +1,14 @@
 .splash-page {
   height: 100vh;
   background-color: white;
-  // background-image: url("http://res.cloudinary.com/rlee0525/image/upload/v1487841618/splash_hd-min_datzif.jpg");
+  background-image: url("http://res.cloudinary.com/rlee0525/image/upload/v1487841618/splash_hd-min_datzif.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .splash-overlay {
   height: 100%;
-  // background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .banner {
@@ -54,7 +54,7 @@
 
 .banner > h1 {
   font-size: 60px;
-  // color: white;
+  color: white;
   -webkit-font-smoothing: antialiased;
 }
 
