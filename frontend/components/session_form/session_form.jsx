@@ -118,10 +118,12 @@ class SessionForm extends React.Component {
                     onChange={this.update('password')}
                     required />
                 </label>
-                <button id="sign-up-log-in-button"
-                        type="submit">{buttonText}</button>
-                <button id ="sign-up-log-in-button"
-                        type="button" onClick={this.demoLogin}>DEMO</button>
+                <div className="buttons">
+                  <button id="sign-up-log-in-button"
+                    type="submit">{buttonText}</button>
+                  <button id ="demo-button"
+                    type="button" onClick={this.demoLogin}>DEMO</button>
+                </div>
                 <p id="question-login">{questionText}</p>
                 <button id="status-toggle"
                         onClick={this.toggleStatus}>{text}</button>
