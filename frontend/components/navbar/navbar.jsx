@@ -18,20 +18,13 @@ class Navbar extends React.Component {
     this.props.router.push("/signup");
   }
 
-  searchable() {
-    return (
-      <ul>
-        <li><Link to="/players">All Players</Link></li>
-        <li><Link to="/courts">All Courts</Link></li>
-      </ul>
-    );
-  }
-
   searchBar() {
     return (
-      <input type="text"
-        placeholder="Search for a match"
-        className="search-bar" />
+      <section className="nav-search-bar">
+        <input type="text"
+          placeholder="Search for a match"
+          className="search-bar" />
+      </section>
     );
   }
 
@@ -59,12 +52,13 @@ class Navbar extends React.Component {
       <header>
         <section className="nav-left">
           <span><Link to="/"><img id="logo" src="http://res.cloudinary.com/rlee0525/image/upload/c_scale,h_25/v1487826027/Logo_rovpdx.png"/></Link></span>
-          { currentUser && this.searchable() }
+          <ul>
+            <li><Link to="/players">All Players</Link></li>
+            <li><Link to="/courts">All Courts</Link></li>
+          </ul>
         </section>
 
-        <section className="nav-search-bar">
-          { currentUser && this.searchBar() }
-        </section>
+        { currentUser && this.searchBar() }
 
         <section className="nav-right">
           { currentUser ? this.isLoggedIn() : this.isLoggedOut()}

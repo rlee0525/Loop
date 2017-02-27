@@ -38,6 +38,10 @@ header section ul {
   color: black;
 }
 
+.nav-left a:hover {
+  border-bottom: 2px solid $bright-green;
+}
+
 .nav-left span {
   padding-right: 11px;
   padding-top: 3px;
