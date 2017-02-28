@@ -30,15 +30,20 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     if (this.state.loginPage) {
-      this.props.login(user).then(hashHistory.replace("/"));
+      this.props.login(user)
+        .then(() => hashHistory.replace("/"))
+        .fail((error) => console.log(error));
     } else {
-      this.props.signup(user).then(hashHistory.replace("/"));
+      this.props.signup(user)
+        .then(() => hashHistory.replace("/"))
+        .fail((error) => console.log(error));
     }
   }
 
   toggleStatus(e) {
     e.preventDefault();
     let loginPage = !this.state.loginPage;
+    this.props.clearErrors();
     this.setState({
       loginPage,
       username: "",
