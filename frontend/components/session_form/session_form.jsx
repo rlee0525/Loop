@@ -93,7 +93,7 @@ class SessionForm extends React.Component {
 
   renderMoreInfo() {
     return (
-      <div>
+      <div className="signup-info">
         <label>
           <input type="text"
             placeholder="First name"
@@ -118,18 +118,18 @@ class SessionForm extends React.Component {
             onChange={this.update('email')}
             required />
         </label>
-        <div>
-          <button className="drop-experience">experience</button>
-          <div class="dropdown-content">
+        <div className="dropdown dropdown-exp">
+          <button className="dropbtn dropbtn-exp">experience</button>
+          <div className="dropdown-content dropdown-content-exp">
             <a href="#"> &lt; 1 year </a>
             <a href="#"> 1 - 3 years </a>
             <a href="#"> 3 - 5 years </a>
             <a href="#"> &gt; 5 years </a>
           </div>
         </div>
-        <div>
-          <button className="drop-level">level</button>
-          <div class="dropdown-content">
+        <div className="dropdown dropdown-lvl">
+          <button className="dropbtn dropbtn-lvl">level</button>
+          <div className="dropdown-content dropdown-content-lvl">
             <a href="#"> 1.5 </a>
             <a href="#"> 2.0 </a>
             <a href="#"> 2.5 </a>
@@ -183,7 +183,7 @@ class SessionForm extends React.Component {
                   {this.props.errors && this.renderErrors()}
                 </div>
 
-                {this.state.loginPage && this.renderMoreInfo()}
+                {!this.state.loginPage && this.renderMoreInfo()}
 
                 <label>
                   <input type="text"
