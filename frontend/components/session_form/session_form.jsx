@@ -110,23 +110,25 @@ class SessionForm extends React.Component {
     const defaultOptionLevel = optionsLevel[0];
 
     return (
-      <div className="signup-info">
-        <label>
-          <input type="text"
-            placeholder="First name"
-            className="login-input-field"
-            value={this.state.firstName}
-            onChange={this.update('firstName')}
-            required />
-        </label>
-        <label>
-          <input type="text"
-            placeholder="Last name"
-            className="login-input-field"
-            value={this.state.lastName}
-            onChange={this.update('lastName')}
-            required />
-        </label>
+      <div className="login-box-inputs">
+        <div className="signup-name">
+          <label>
+            <input type="text"
+              placeholder="First name"
+              className="login-input-field user-name-input"
+              value={this.state.firstName}
+              onChange={this.update('firstName')}
+              required />
+          </label>
+          <label>
+            <input type="text"
+              placeholder="Last name"
+              className="login-input-field user-name-input"
+              value={this.state.lastName}
+              onChange={this.update('lastName')}
+              required />
+          </label>
+        </div>
         <label>
           <input type="text"
             placeholder="Email"

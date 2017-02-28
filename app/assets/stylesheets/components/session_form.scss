@@ -133,6 +133,23 @@
   }
 }
 
+.signup-name {
+  display: flex;
+  box-sizing: border-box;
+  width: 58%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-top-right-radius: 5px;
+  padding-top: 30px;
+}
+
+.user-name-input {
+  width: 120px !important;
+  margin-right: 10px;
+}
+
 .Dropdown-root {
   position: relative;
 }
@@ -176,7 +193,6 @@
 }
 
 .Dropdown-menu {
-
   background-color: white;
   border: 1px solid #ccc;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
