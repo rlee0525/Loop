@@ -8,7 +8,12 @@ class SessionForm extends React.Component {
     this.state = {
       loginPage: false,
       username: "",
-      password: ""
+      password: "",
+      firstName: "",
+      lastName: "",
+      email: "",
+      level: 0,
+      experience: 0
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -86,6 +91,67 @@ class SessionForm extends React.Component {
     }
   }
 
+  renderMoreInfo() {
+    return (
+      <div>
+        <label>
+          <input type="text"
+            placeholder="First name"
+            className="login-input-field"
+            value={this.state.firstName}
+            onChange={this.update('firstName')}
+            required />
+        </label>
+        <label>
+          <input type="text"
+            placeholder="Last name"
+            className="login-input-field"
+            value={this.state.lastName}
+            onChange={this.update('lastName')}
+            required />
+        </label>
+        <label>
+          <input type="text"
+            placeholder="Email"
+            className="login-input-field"
+            value={this.state.email}
+            onChange={this.update('email')}
+            required />
+        </label>
+        <div>
+          <button className="drop-experience">experience</button>
+          <div class="dropdown-content">
+            <a href="#"> &lt; 1 year </a>
+            <a href="#"> 1 - 3 years </a>
+            <a href="#"> 3 - 5 years </a>
+            <a href="#"> &gt; 5 years </a>
+          </div>
+        </div>
+        <div>
+          <button className="drop-level">level</button>
+          <div class="dropdown-content">
+            <a href="#"> 1.5 </a>
+            <a href="#"> 2.0 </a>
+            <a href="#"> 2.5 </a>
+            <a href="#"> 3.0 </a>
+            <a href="#"> 3.5 </a>
+            <a href="#"> 4.0 </a>
+            <a href="#"> 4.5 </a>
+            <a href="#"> 5.0 </a>
+            <a href="#"> 5.5 </a>
+            <a href="#"> 6.0 </a>
+            <a href="#"> 6.5 </a>
+            <a href="#"> 7.0 </a>
+            <a target="_blank"
+               href="https://www.usta.com/Adult-Tennis/USTA-League/ntrp/">
+               What is this?
+             </a>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   renderErrors() {
     return (
       <ul className="errors">
@@ -116,6 +182,9 @@ class SessionForm extends React.Component {
                 <div className="errors-container">
                   {this.props.errors && this.renderErrors()}
                 </div>
+
+                {this.state.loginPage && this.renderMoreInfo()}
+
                 <label>
                   <input type="text"
                     placeholder="Username"
