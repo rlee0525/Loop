@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
+import Dropdown from 'react-dropdown';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -95,6 +96,18 @@ class SessionForm extends React.Component {
   }
 
   renderMoreInfo() {
+    const optionsExperience = [
+      "< 1 year", "1 - 3 years", "3 - 5 years", "> 5 years"
+    ];
+    const defaultOptionExperience = optionsExperience[0];
+
+    const optionsLevel = [
+      1.5, 2.0, 2.5, 3.0,
+      3.5, 4.0, 4.5, 5.0,
+      5.5, 6.0, 6.5, 7.0
+    ];
+    const defaultOptionLevel = optionsLevel[0];
+
     return (
       <div className="signup-info">
         <label>
@@ -121,36 +134,20 @@ class SessionForm extends React.Component {
             onChange={this.update('email')}
             required />
         </label>
-        <div className="dropdown dropdown-exp">
-          <button className="dropbtn dropbtn-exp">experience</button>
-          <div className="dropdown-content dropdown-content-exp">
-            <a href="#"> &lt; 1 year </a>
-            <a href="#"> 1 - 3 years </a>
-            <a href="#"> 3 - 5 years </a>
-            <a href="#"> &gt; 5 years </a>
-          </div>
+        <div>
+          <Dropdown options={optionsExperience}
+            onChange={this._onSelect}
+
+            placeholder="Select your experience" />
+          <Dropdown options={optionsLevel}
+            onChange={this._onSelect}
+
+            placeholder="Select your level" />
         </div>
-        <div className="dropdown dropdown-lvl">
-          <button className="dropbtn dropbtn-lvl">level</button>
-          <div className="dropdown-content dropdown-content-lvl">
-            <a href="#"> 1.5 </a>
-            <a href="#"> 2.0 </a>
-            <a href="#"> 2.5 </a>
-            <a href="#"> 3.0 </a>
-            <a href="#"> 3.5 </a>
-            <a href="#"> 4.0 </a>
-            <a href="#"> 4.5 </a>
-            <a href="#"> 5.0 </a>
-            <a href="#"> 5.5 </a>
-            <a href="#"> 6.0 </a>
-            <a href="#"> 6.5 </a>
-            <a href="#"> 7.0 </a>
-            <a target="_blank"
-               href="https://www.usta.com/Adult-Tennis/USTA-League/ntrp/">
-               What is this?
-             </a>
-          </div>
-        </div>
+        <a target="_blank"
+           href="https://www.usta.com/Adult-Tennis/USTA-League/ntrp/">
+           What is this?
+        </a>
       </div>
     );
   }
