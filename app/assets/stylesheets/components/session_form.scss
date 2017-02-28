@@ -169,11 +169,11 @@
       background-color: #f1f1f1
     }
 
-    .dropdown-exp:hover .dropdown-content-exp {
+    .dropdown-exp:hover > .dropdown-content-exp {
       display: block;
     }
 
-    .dropdown-lvl:hover .dropdown-content-lvl {
+    .dropdown-lvl:hover > .dropdown-content-lvl {
       display: block;
     }
 

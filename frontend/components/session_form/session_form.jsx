@@ -33,7 +33,10 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = this.state;
+    const user = {
+      username: this.state.username,
+      password: this.state.password
+    };
     if (this.state.loginPage) {
       this.props.login(user)
         .then(() => hashHistory.replace("/"))
