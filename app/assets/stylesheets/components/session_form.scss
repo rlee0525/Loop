@@ -139,6 +139,7 @@
 
 .Dropdown-control {
   position: relative;
+  width: 260px;
   overflow: hidden;
   background-color: white;
   border: 1px solid #ccc;
@@ -175,6 +176,7 @@
 }
 
 .Dropdown-menu {
+
   background-color: white;
   border: 1px solid #ccc;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
@@ -184,7 +186,7 @@
   overflow-y: auto;
   position: absolute;
   top: 100%;
-  width: 100%;
+  width: 260px;
   z-index: 1000;
   -webkit-overflow-scrolling: touch;
 }
@@ -197,6 +199,7 @@
 }
 
 .Dropdown-option {
+  width: 260px;
   box-sizing: border-box;
   color: rgba(51, 51, 51, 0.8);
   cursor: pointer;

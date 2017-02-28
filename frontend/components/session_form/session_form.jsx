@@ -102,6 +102,7 @@ class SessionForm extends React.Component {
     const defaultOptionExperience = optionsExperience[0];
 
     const optionsLevel = [
+      "I don't know",
       1.5, 2.0, 2.5, 3.0,
       3.5, 4.0, 4.5, 5.0,
       5.5, 6.0, 6.5, 7.0
