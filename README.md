@@ -1,3 +1,3 @@
 # MatchUp
 
-Best way to find tennis court and your match online!
+Best way to find nearby tennis court and partner online!
