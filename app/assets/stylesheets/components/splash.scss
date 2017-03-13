@@ -9,7 +9,7 @@
   display: flex;
   height: 100%;
   width: 5vw;
-  background-color: #E5E5E4;
+  background-color: $foggy;
 }
 
 .splash-overlay {
@@ -17,10 +17,6 @@
   width: 90vw;
   background-color: white;
   overflow-y: visible;
-  // background-color: rgba(0, 0, 0, 0.6);
-  // background-image: url("http://res.cloudinary.com/rlee0525/image/upload/v1487841618/splash_hd-min_datzif.jpg");
-  // background-size: cover;
-  // background-position: center;
 }
 
 .banner {
