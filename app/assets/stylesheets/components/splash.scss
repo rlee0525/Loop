@@ -3,8 +3,8 @@
   background-color: #E5E5E4;
   display: flex;
   flex-direction: row;
-  margin-left: 18vw;
-  margin-right: 20vw;
+  margin-left: 22vw;
+  margin-right: 22vw;
   padding-top: 80px;
 }
 
@@ -58,31 +58,77 @@
   font-family: $lato;
   font-weight: 300;
   text-align: left;
+  letter-spacing: 1px;
 }
 
 .banner > h1 > span {
   color: $teal;
   font-weight: 900;
-  letter-spacing: 0.5px;
-  margin-right: 20px;
+  letter-spacing: 1px;
+  margin-right: 10px;
   line-height: 1.5em;
 }
 
-.search-bar-section {
-  margin-top: 80px;
+.search-bar-container {
+  margin-top: 70px;
   width: 100%;
-  position: relative;
-  justify-content: center;
-  padding-right: 10px;
+  border: 1.5px solid $light-gray;
+  box-shadow: 1.5px 1.5px 1.5px $light-gray;
+  font-family: $lato;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-.search-bar {
-  width: 100%;
+.search-bar-section {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.search-container {
+  width: 33%;
+  border-left: 1px solid $light-gray;
+  position: relative;
+}
+
+.search-container:first-child {
+  border-left: none;
+}
+
+.search-title > p {
+  font-family: $lato;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 15px 20px 10px 20px;
+  color: $dark-foggy;
+}
+
+.search-input > input {
+  border: none;
+  font-family: $lato;
+  font-weight: 300;
+  font-size: 19px;
+  padding: 5px 20px 10px 20px;
+  color: $foggy;
+  cursor: pointer;
+}
+
+.search-button {
+  position: absolute;
+  top: calc(50% - 25px);
+  right: 1%;
+}
+
+.search-button > button {
+  background-color: $teal;
+  font-family: $lato;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: white;
+  font-size: 18px;
+  padding: 14px 20px;
   border-radius: 5px;
-  padding: 8px 15px 8px 33px;
-  border: 1px solid gray;
-  font-size: 30px;
-  box-shadow: 0.5px 0.5px 0.5px gray;
+  cursor: pointer;
 }
 
 #banner-button {
@@ -102,4 +148,8 @@
 #banner-button:hover {
   cursor: pointer;
   background-color: $bright-green;
+}
+
+::-webkit-input-placeholder {
+  color: $foggy;
 }
