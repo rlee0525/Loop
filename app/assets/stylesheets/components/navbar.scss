@@ -7,11 +7,9 @@ header {
   font-weight: 400;
   justify-content: space-between;
   align-items: center;
-  height: 33px;
-  border-bottom: 2px solid black;
-  padding-top: 0.8em;
-  padding-bottom: 0.8em;
+  height: 80px;
   background: white;
+  font-family: $lato;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -25,77 +23,32 @@ header section ul {
   align-items: center;
 }
 
-.nav-left {
-  padding-left: 40px;
-}
-
-.nav-left li {
-  padding-right: 11px;
-  padding-left: 11px;
-}
-
-.nav-left li a {
-  color: black;
-}
-
-.nav-left span {
-  padding-right: 11px;
-  padding-top: 3px;
-}
-
-.nav-left a:hover {
-  color: $green;
+img#logo {
+  height: 34px;
+  padding: 0 24px;
 }
 
 .nav-right {
   padding-right: 20px;
 }
 
-.nav-right li:first-child {
+.nav-right li {
+  font-size: 16px;
+  font-family: $lato;
+  color: black;
+  text-align: center;
+  padding-bottom: 8px;
+  line-height: 1;
+  margin-right: 40px;
+}
+
+.nav-right li:last-child {
   margin-right: 20px;
 }
 
-.nav-right button {
-  font-size: 14px;
-  background: $green;
-	color: white;
-	padding: 8px 15px;
-	border-radius: 6px;
-	text-align: center;
-  box-shadow: 1px 1px 1px gray;
-  line-height: 1;
-  margin-right: 5px;
-}
-
-.nav-right button:hover {
-  background: $bright-green;
+.nav-right li:hover {
   cursor: pointer;
-}
-
-.nav-search-bar {
-  width: 50%;
-  position: relative;
-  justify-content: center;
-  max-width: 800px;
-  padding-right: 10px;
-}
-
-.search-bar {
-  width: 90%;
-  border-radius: 5px;
-  padding: 8px 15px 8px 33px;
-  border: 1px solid gray;
-  font-size: 12px;
-  box-shadow: 0.5px 0.5px 0.5px gray;
-}
-
-.nav-search-bar::before {
-  position: absolute;
-  content: "\f002";
-  font-family: FontAwesome;
-  color: gray;
-  top: 10px;
-  left: 3.5%;
+  border-bottom: 3px solid $foggy;
 }
 
 #profile-pic {

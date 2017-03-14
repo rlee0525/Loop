@@ -1,5 +1,5 @@
 {
-  "name": "MatchUp",
+  "name": "Loop",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rlee0525/MatchUp.git"
+    "url": "git+https://github.com/rlee0525/Loop.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rlee0525/MatchUp/issues"
+    "url": "https://github.com/rlee0525/Loop/issues"
   },
-  "homepage": "https://github.com/rlee0525/MatchUp#readme",
+  "homepage": "https://github.com/rlee0525/Loop#readme",
   "dependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
