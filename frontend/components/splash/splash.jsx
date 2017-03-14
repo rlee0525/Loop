@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
 import FontAwesome from 'react-fontawesome';
+import Slider from 'react-slick';
 
 class Splash extends React.Component {
   constructor(props) {
@@ -18,6 +19,14 @@ class Splash extends React.Component {
   }
 
   render() {
+    let settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 1
+    };
+
     return (
       <div className="splash-page">
         <div className="splash-body">
@@ -82,16 +91,18 @@ class Splash extends React.Component {
               <div className="featured-title">
                 Featured concerts
               </div>
-              <div className="featured-slider">
-                <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla5_nuqs5l.jpg"/>
-                <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla7_bgd2nk.jpg"/>
-                <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla1_kd83qs.jpg"/>
-                <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla2_nep093.jpg"/>
-                <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla3_x9hooi.jpg"/>
-                <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla4_cskppb.jpg"/>
-                <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla6_savm0g.jpg"/>
-                <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla8_qj9fpq.jpg"/>
-                <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla9_tpj90y.jpg"/>
+              <div className="featured-slider-1">
+                <Slider className="slider-container" {...settings}>
+                  <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla5_nuqs5l.jpg"/>
+                  <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla7_bgd2nk.jpg"/>
+                  <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla1_kd83qs.jpg"/>
+                  <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla2_nep093.jpg"/>
+                  <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla3_x9hooi.jpg"/>
+                  <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla4_cskppb.jpg"/>
+                  <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla6_savm0g.jpg"/>
+                  <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla8_qj9fpq.jpg"/>
+                  <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla9_tpj90y.jpg"/>
+                </Slider>
               </div>
             </div>
             <div className="featured-div">
