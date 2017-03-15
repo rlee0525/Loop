@@ -7,7 +7,7 @@ header {
   font-weight: 400;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 70px;
   background: white;
   font-family: $lato;
   -webkit-font-smoothing: antialiased;
@@ -37,14 +37,12 @@ img#logo {
   font-family: $lato;
   color: black;
   text-align: center;
-  padding-top: 10px;
   padding-bottom: 12px;
-  line-height: 1;
   margin-right: 40px;
 }
 
 .nav-right li:last-child {
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 .nav-right li:hover {

@@ -1,0 +1,45 @@
+* {
+  min-height: 0;
+  min-width: 0;
+}
+
+.featured-div, .hottest-div, .booked-div {
+  margin-bottom: 40px;
+}
+
+.featured-title, .hottest-title, .booked-title {
+  font-family: $lato;
+  font-size: 18px;
+  color: $foggy;
+  margin-bottom: 25px;
+}
+
+.featured-slider, .hottest-slider, .booked-slider {
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+}
+
+.slider-container img {
+  width: 250px;
+  height: 400px;
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.slick-arrow {
+  position: absolute;
+  width: 50px;
+  z-index: 10;
+  top: 100px;
+}
+
+.slick-next {
+  display: block;
+  left: 100%;
+  z-index: 9999;
+}
