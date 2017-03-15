@@ -46,8 +46,8 @@ class Footer extends React.Component {
             </div>
           </div>
           <div className="footer-links">
-            <div>
-              <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489450126/logo1_xm2m2j.png" />Loop, Inc
+            <div id="footer-logo">
+              <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489572316/Logomakr_87zUI0_rtvjck.png" />© Loop, Inc.
             </div>
             <div>
               <div className="icons">
