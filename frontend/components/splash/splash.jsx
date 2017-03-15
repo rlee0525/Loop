@@ -7,6 +7,9 @@ import Slider from 'react-slick';
 import FeaturedSlider from '../main_sliders/featured_slider';
 import HottestSlider from '../main_sliders/hottest_slider';
 import BookedSlider from '../main_sliders/booked_slider';
+import ElectronPage from '../downloads/electron_page';
+import MobilePage from '../downloads/mobile_page';
+import Footer from '../footer/footer';
 
 class Splash extends React.Component {
   constructor(props) {
@@ -57,7 +60,6 @@ class Splash extends React.Component {
                 <span id="title">Which one?</span>
                 Plan your next event<br/>on Loop<span id="title">.</span>
               </h1>
-
               <MainSearch />
             </div>
 
@@ -74,17 +76,9 @@ class Splash extends React.Component {
               <BookedSlider />
             </div>
 
-            <div className="electron">
-              This is electron app
-            </div>
-
-            <div className="mobile">
-              This is mobile app
-            </div>
-
-            <div className="footer">
-              Loop, Inc.
-            </div>
+            <ElectronPage />
+            <MobilePage />
+            <Footer />
           </div>
         </div>
       </div>
