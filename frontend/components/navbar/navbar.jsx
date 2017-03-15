@@ -23,7 +23,7 @@ class Navbar extends React.Component {
       <ul>
         <li onClick={this.goToSignIn}>Host an Event</li>
         <li onClick={this.goToSignIn}>Help</li>
-        <li><img id="profile-pic" src="http://res.cloudinary.com/rlee0525/image/upload/v1488163714/male_icon_x8didb.png" /></li>
+        <li onClick={this.goToSignIn}>My Account</li>
         <li onClick={this.signOut}>Sign Out</li>
       </ul>
     );

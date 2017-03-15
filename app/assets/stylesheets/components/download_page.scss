@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 60px;
-  border-bottom: 1px solid $light-gray;
 }
 
 .download-demo, .download-links {
@@ -31,6 +30,5 @@
 .download-links > span:hover {
   padding-bottom: 10px;
   border-bottom: 3px solid $pink;
-  color: $pink;
   cursor: pointer;
 }

@@ -76,9 +76,10 @@ class Splash extends React.Component {
             </div>
 
             <DownloadPage />
-            <Footer />
           </div>
         </div>
+        
+        <Footer />
       </div>
     );
   }

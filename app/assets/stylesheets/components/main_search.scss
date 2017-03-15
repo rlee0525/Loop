@@ -3,7 +3,6 @@
   width: 100%;
   border: 1.5px solid $light-gray;
   box-shadow: 1px 1px 1px $light-gray;
-  font-family: $lato;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -25,7 +24,6 @@
 }
 
 .search-title > p {
-  font-family: $lato;
   font-size: 15px;
   font-weight: 400;
   padding: 15px 20px 10px 20px;
@@ -34,7 +32,6 @@
 
 .search-input > input {
   border: none;
-  font-family: $lato;
   font-weight: 300;
   font-size: 19px;
   padding: 5px 20px 10px 20px;
@@ -50,7 +47,6 @@
 
 .search-button > button {
   background-color: $teal;
-  font-family: $lato;
   font-weight: 300;
   letter-spacing: 1px;
   color: white;

@@ -8,22 +8,25 @@ class Footer extends React.Component {
         <div className="footer-container">
           <div className="footer-menu">
             <div className="footer-vertical-menu">
-              <span>English</span>
-              <span>USD</span>
+              <span>English<FontAwesome
+                        className='fa-chevron-down'
+                        name='chevron-down'
+                        id='fa-chevron-down' />
+              </span>
             </div>
             <div className="footer-vertical-menu">
-              <span>Loop</span>
+              <p className="menu-header-footer">Loop</p>
               <ul>
                 <li>About</li>
                 <li>Careers</li>
                 <li>Press</li>
                 <li>Policies</li>
                 <li>Help</li>
-                <li>Diversity & Belonging</li>
+                <li>Diversity</li>
               </ul>
             </div>
             <div className="footer-vertical-menu">
-              <span>Discover</span>
+              <p className="menu-header-footer">Discover</p>
               <ul>
                 <li>Trust & Safety</li>
                 <li>Travel Credit</li>
@@ -34,11 +37,11 @@ class Footer extends React.Component {
               </ul>
             </div>
             <div className="footer-vertical-menu">
-              <span>Hosting</span>
+              <p className="menu-header-footer">Hosting</p>
               <ul>
                 <li>Why Host</li>
                 <li>Hospitality</li>
-                <li>Responsible Hosting</li>
+                <li>Hosting</li>
               </ul>
             </div>
           </div>
