@@ -7,8 +7,7 @@ import Slider from 'react-slick';
 import FeaturedSlider from '../main_sliders/featured_slider';
 import HottestSlider from '../main_sliders/hottest_slider';
 import BookedSlider from '../main_sliders/booked_slider';
-import ElectronPage from '../downloads/electron_page';
-import MobilePage from '../downloads/mobile_page';
+import DownloadPage from '../download_page/download_page';
 import Footer from '../footer/footer';
 
 class Splash extends React.Component {
@@ -76,8 +75,7 @@ class Splash extends React.Component {
               <BookedSlider />
             </div>
 
-            <ElectronPage />
-            <MobilePage />
+            <DownloadPage />
             <Footer />
           </div>
         </div>
