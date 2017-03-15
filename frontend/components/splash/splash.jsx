@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
 import FontAwesome from 'react-fontawesome';
 import Navbar from '../navbar/navbar_container';
+import MainSearch from '../main_search/main_search_container';
 import Slider from 'react-slick';
 
 class Splash extends React.Component {
@@ -89,129 +90,89 @@ class Splash extends React.Component {
               <h1>
                 <span id="title">Which one?</span>
                 Plan your next event<br/>on Loop<span id="title">.</span>
-            </h1>
+              </h1>
 
-            <div className="search-bar-container">
-              <div className="search-bar-section">
-                <div className="search-container">
-                  <div className="search-title">
-                    <p>Category</p>
-                  </div>
-                  <div className="search-input">
-                    <input type="text"
-                      placeholder="All"
-                      className="search-bar" />
-                  </div>
+              <MainSearch />
+            </div>
+
+            <div className="suggestions-navbar">
+              <span id="suggestion-active">FOR YOU</span>
+              <span>CATEGORIES</span>
+              <span>ACTIVITES</span>
+              <span>PLACES</span>
+            </div>
+
+            <div className="splash-main">
+              <div className="featured-div">
+                <div className="featured-title">
+                  Featured concerts
                 </div>
-
-                <div className="search-container">
-                  <div className="search-title">
-                    <p>Activity</p>
-                  </div>
-                  <div className="search-input">
-                    <input type="text"
-                      placeholder="Anything"
-                      className="search-bar" />
-                  </div>
-                </div>
-
-                <div className="search-container">
-                  <div className="search-title">
-                    <p>Date</p>
-                  </div>
-
-                  <div className="search-input">
-                    <input type="text"
-                      placeholder="Anytime"
-                      className="search-bar" />
-                  </div>
-
-                  <div className="search-button">
-                    <button>Search</button>
-                  </div>
+                <div className="featured-slider">
+                  <Slider className="slider-container" {...settings}>
+                    <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla5_nuqs5l.jpg"/>
+                    <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla7_bgd2nk.jpg"/>
+                    <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla1_kd83qs.jpg"/>
+                    <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla2_nep093.jpg"/>
+                    <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla3_x9hooi.jpg"/>
+                    <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla4_cskppb.jpg"/>
+                    <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla6_savm0g.jpg"/>
+                    <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla8_qj9fpq.jpg"/>
+                    <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla9_tpj90y.jpg"/>
+                  </Slider>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="suggestions-navbar">
-            <span id="suggestion-active">FOR YOU</span>
-            <span>CATEGORIES</span>
-            <span>ACTIVITES</span>
-            <span>PLACES</span>
-          </div>
-
-          <div className="splash-main">
-            <div className="featured-div">
-              <div className="featured-title">
-                Featured concerts
+              <div className="booked-div">
+                <div className="featured-title">
+                  Just booked
+                </div>
+                <div className="featured-slider">
+                  <Slider className="slider-container" {...settings}>
+                    <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla6_savm0g.jpg"/>
+                    <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla2_nep093.jpg"/>
+                    <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla3_x9hooi.jpg"/>
+                    <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla4_cskppb.jpg"/>
+                    <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla5_nuqs5l.jpg"/>
+                    <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla7_bgd2nk.jpg"/>
+                    <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla8_qj9fpq.jpg"/>
+                    <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla9_tpj90y.jpg"/>
+                    <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla1_kd83qs.jpg"/>
+                  </Slider>
+                </div>
               </div>
-              <div className="featured-slider">
-                <Slider className="slider-container" {...settings}>
-                  <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla5_nuqs5l.jpg"/>
-                  <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla7_bgd2nk.jpg"/>
-                  <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla1_kd83qs.jpg"/>
-                  <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla2_nep093.jpg"/>
-                  <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla3_x9hooi.jpg"/>
-                  <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla4_cskppb.jpg"/>
-                  <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla6_savm0g.jpg"/>
-                  <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla8_qj9fpq.jpg"/>
-                  <img className="img-slider" src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla9_tpj90y.jpg"/>
-                </Slider>
-              </div>
-            </div>
-            <div className="booked-div">
-              <div className="featured-title">
-                Just booked
-              </div>
-              <div className="featured-slider">
-                <Slider className="slider-container" {...settings}>
-                  <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla6_savm0g.jpg"/>
-                  <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla2_nep093.jpg"/>
-                  <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla3_x9hooi.jpg"/>
-                  <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla4_cskppb.jpg"/>
-                  <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla5_nuqs5l.jpg"/>
-                  <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla7_bgd2nk.jpg"/>
-                  <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla8_qj9fpq.jpg"/>
-                  <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla9_tpj90y.jpg"/>
-                  <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla1_kd83qs.jpg"/>
-                </Slider>
+              <div className="activities-div">
+                <div className="featured-title">
+                  Activities
+                </div>
+                <div className="featured-slider">
+                  <Slider className="slider-container" {...settings}>
+                    <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla6_savm0g.jpg"/>
+                    <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla2_nep093.jpg"/>
+                    <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla3_x9hooi.jpg"/>
+                    <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla4_cskppb.jpg"/>
+                    <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla5_nuqs5l.jpg"/>
+                    <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla7_bgd2nk.jpg"/>
+                    <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla8_qj9fpq.jpg"/>
+                    <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla9_tpj90y.jpg"/>
+                    <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla1_kd83qs.jpg"/>
+                  </Slider>
+                </div>
               </div>
             </div>
-            <div className="activities-div">
-              <div className="featured-title">
-                Activities
-              </div>
-              <div className="featured-slider">
-                <Slider className="slider-container" {...settings}>
-                  <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla6_savm0g.jpg"/>
-                  <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla2_nep093.jpg"/>
-                  <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla3_x9hooi.jpg"/>
-                  <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla4_cskppb.jpg"/>
-                  <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla5_nuqs5l.jpg"/>
-                  <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla7_bgd2nk.jpg"/>
-                  <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla8_qj9fpq.jpg"/>
-                  <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla9_tpj90y.jpg"/>
-                  <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla1_kd83qs.jpg"/>
-                </Slider>
-              </div>
+
+            <div className="electron">
+              This is electron app
             </div>
-          </div>
 
-          <div className="electron">
-            This is electron app
-          </div>
+            <div className="mobile">
+              This is mobile app
+            </div>
 
-          <div className="mobile">
-            This is mobile app
-          </div>
-
-          <div className="footer">
-            Loop, Inc.
+            <div className="footer">
+              Loop, Inc.
+            </div>
           </div>
         </div>
       </div>
-    </div>
     );
   }
 }
