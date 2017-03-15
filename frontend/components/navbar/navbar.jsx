@@ -21,6 +21,8 @@ class Navbar extends React.Component {
   isLoggedIn() {
     return (
       <ul>
+        <li onClick={this.goToSignIn}>Host an Event</li>
+        <li onClick={this.goToSignIn}>Help</li>
         <li><img id="profile-pic" src="http://res.cloudinary.com/rlee0525/image/upload/v1488163714/male_icon_x8didb.png" /></li>
         <li onClick={this.signOut}>Sign Out</li>
       </ul>
@@ -30,6 +32,8 @@ class Navbar extends React.Component {
   isLoggedOut() {
     return (
       <ul>
+        <li onClick={this.goToSignIn}>Host an Event</li>
+        <li onClick={this.goToSignIn}>Help</li>
         <li onClick={this.goToSignIn}>Sign In</li>
         <li onClick={this.goToSignIn}>Demo</li>
       </ul>
@@ -48,9 +52,6 @@ class Navbar extends React.Component {
             </Link>
           </span>
         </section>
-
-
-
         <section className="nav-right">
           { currentUser ? this.isLoggedIn() : this.isLoggedOut()}
         </section>

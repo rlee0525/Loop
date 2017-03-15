@@ -1,6 +1,6 @@
 header {
-  position: fixed;
-  width: 100%;
+  position: absolute;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   font-size: 13px;
@@ -24,7 +24,7 @@ header section ul {
 }
 
 img#logo {
-  height: 34px;
+  height: 28px;
   padding: 0 24px;
 }
 
@@ -33,11 +33,12 @@ img#logo {
 }
 
 .nav-right li {
-  font-size: 16px;
+  font-size: 14px;
   font-family: $lato;
   color: black;
   text-align: center;
-  padding-bottom: 8px;
+  padding-top: 10px;
+  padding-bottom: 12px;
   line-height: 1;
   margin-right: 40px;
 }
