@@ -16,8 +16,8 @@
 
 .featured-slider, .hottest-slider, .booked-slider {
   display: flex;
-  flex-direction: row;
-  overflow-x: hidden;
+  flex-direction: column;
+  position: relative;
 }
 
 .slider-container img {
@@ -27,19 +27,21 @@
 
 .slider-container {
   display: flex;
-  flex-direction: row;
-  position: relative;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 
 .slick-arrow {
   position: absolute;
-  width: 50px;
-  z-index: 10;
-  top: 100px;
+  cursor: pointer;
+  z-index: 1;
+  top: calc(50% - 8px);
+}
+
+.slick-prev {
+  left: -20px;
 }
 
 .slick-next {
-  display: block;
-  left: 100%;
-  z-index: 9999;
+  right: -20px;
 }
