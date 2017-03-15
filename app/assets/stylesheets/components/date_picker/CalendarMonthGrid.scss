@@ -1,0 +1,32 @@
+@import 'variables';
+
+.CalendarMonthGrid {
+  background: $react-dates-color-white;
+  z-index: 0;
+  text-align: left;
+}
+
+.CalendarMonthGrid--animating {
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -moz-transition: -moz-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  z-index: 1;
+}
+
+.CalendarMonthGrid--horizontal {
+  position: absolute;
+  margin-top: 10px;
+  left: 9px;
+  width: 4 * $react-dates-width-day-picker;
+}
+
+.CalendarMonthGrid--vertical {
+  width: $react-dates-width-day-picker;
+  margin: 0 auto;
+}
+
+.CalendarMonthGrid--vertical-scrollable {
+  width: $react-dates-width-day-picker;
+  margin: 0 auto;
+  overflow-y: scroll;
+}

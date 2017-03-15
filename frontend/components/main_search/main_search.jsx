@@ -1,10 +1,20 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
+import DatePicker from '../date_picker/date_picker';
 
 class MainSearch extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      displayCal: false
+    };
+  }
+
+  displayCalendar() {
+    this.setState({
+      displayCal: true
+    });
   }
 
   render() {
@@ -26,23 +36,25 @@ class MainSearch extends React.Component {
 
           <div className="search-container">
             <div className="search-title">
-              <p>Activity</p>
+              <p>Date</p>
             </div>
-            <div className="search-input">
-              <input type="text"
-                placeholder="Anything"
-                className="search-bar" />
+
+            <div className="search-input" onClick={this.displayCalendar.bind(this)}>
+              { this.state.displayCal ?
+                <DatePicker className="display-calendar" /> :
+                <input type="text"
+                       placeholder="Anytime"
+                       className="search-bar" />}
             </div>
           </div>
 
           <div className="search-container">
             <div className="search-title">
-              <p>Date</p>
+              <p>Activity</p>
             </div>
-
             <div className="search-input">
               <input type="text"
-                placeholder="Anytime"
+                placeholder="Anything"
                 className="search-bar" />
             </div>
 
@@ -51,6 +63,7 @@ class MainSearch extends React.Component {
             </div>
           </div>
         </div>
+
       </div>
     );
   }

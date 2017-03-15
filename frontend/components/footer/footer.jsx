@@ -57,7 +57,7 @@ class Footer extends React.Component {
                     name='user'
                     id='fa-user' />
                 </a>
-                <a href="https://github.com/rlee0525">
+                <a href="https://github.com/rlee0525/Loop">
                   <FontAwesome
                     className='fa-github'
                     name='github'
