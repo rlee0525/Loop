@@ -20,9 +20,11 @@
   position: relative;
 }
 
-.slider-container img {
+.slick-slide {
+  box-sizing: border-box;
   width: 250px;
   height: 400px;
+  padding-left: 15px;
 }
 
 .slider-container {

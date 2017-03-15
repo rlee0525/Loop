@@ -70,7 +70,7 @@ class FeaturedSlider extends React.Component {
     return (
       <div className="featured-div">
         <div className="featured-title">
-          Featured concerts
+          Featured events
         </div>
         <div className="featured-slider">
           <Slider className="slider-container" {...settings}>

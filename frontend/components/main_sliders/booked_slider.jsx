@@ -74,15 +74,15 @@ class BookedSlider extends React.Component {
         </div>
         <div className="booked-slider">
           <Slider className="slider-container" {...settings}>
-            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla6_savm0g.jpg"/>
-            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla2_nep093.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla3_x9hooi.jpg"/>
-            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla4_cskppb.jpg"/>
-            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla5_nuqs5l.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla7_bgd2nk.jpg"/>
+            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla4_cskppb.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla8_qj9fpq.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478256/lolla9_tpj90y.jpg"/>
+            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla5_nuqs5l.jpg"/>
+            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla2_nep093.jpg"/>
             <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla1_kd83qs.jpg"/>
+            <img src="http://res.cloudinary.com/rlee0525/image/upload/v1489478255/lolla6_savm0g.jpg"/>
           </Slider>
         </div>
       </div>
