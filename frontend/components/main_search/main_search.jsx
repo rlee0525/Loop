@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
-import FontAwesome from 'react-fontawesome';
 
 class MainSearch extends React.Component {
   constructor(props) {
