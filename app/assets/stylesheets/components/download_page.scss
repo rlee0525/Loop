@@ -1,7 +1,10 @@
 .download-page {
+  box-sizing: padding-box;
   margin-top: 150px;
   display: flex;
   flex-direction: column;
+  padding-bottom: 60px;
+  border-bottom: 1px solid $light-gray;
 }
 
 .download-demo, .download-links {
@@ -13,4 +16,21 @@
 .download-demo > img {
   width: 40%;
   height: 40%;
+}
+
+.download-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.download-links > span {
+  padding-bottom: 13px;
+}
+
+.download-links > span:hover {
+  padding-bottom: 10px;
+  border-bottom: 3px solid $pink;
+  color: $pink;
+  cursor: pointer;
 }
