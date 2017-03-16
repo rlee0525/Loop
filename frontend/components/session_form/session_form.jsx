@@ -10,11 +10,11 @@ class SessionForm extends React.Component {
       loginPage: false,
       username: "",
       password: "",
-      firstName: "",
-      lastName: "",
-      email: "",
-      level: 0,
-      experience: 0
+      // firstName: "",
+      // lastName: "",
+      // email: "",
+      // level: 0,
+      // experience: 0
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -33,6 +33,7 @@ class SessionForm extends React.Component {
   }
 
   handleSubmit(e) {
+    const that = this;
     e.preventDefault();
     const user = {
       username: this.state.username,
@@ -40,11 +41,11 @@ class SessionForm extends React.Component {
     };
     if (this.state.loginPage) {
       this.props.login(user)
-        .then(() => hashHistory.replace("/"))
+        .then(that.props.closeModal)
         .fail((error) => console.log(error));
     } else {
       this.props.signup(user)
-        .then(() => hashHistory.replace("/"))
+        .then(that.props.closeModal)
         .fail((error) => console.log(error));
     }
   }
@@ -184,7 +185,7 @@ class SessionForm extends React.Component {
             {this.props.errors && this.renderErrors()}
           </div>
 
-          {!this.state.loginPage && this.renderMoreInfo()}
+
 
           <label>
             <input type="text"
@@ -220,3 +221,5 @@ class SessionForm extends React.Component {
 }
 
 export default SessionForm;
+
+// {!this.state.loginPage && this.renderMoreInfo()}

@@ -16,7 +16,7 @@
     padding: 20px;
     justify-content: center;
     flex-direction: column;
-    background-color: $dark-red;
+    background-color: $pink;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     box-sizing: border-box;
@@ -59,7 +59,7 @@
         font-size: 12px;
         padding-bottom: 5px;
         line-height: 1.5em;
-        color: $dark-red;
+        color: $pink;
       }
     }
 
@@ -77,7 +77,7 @@
       margin: 10px 0;
 
       #sign-up-log-in-button, #demo-button {
-        background-color: $dark-red;
+        background-color: $pink;
         width: 120px;
         height: 30px;
         margin: 0 10px;
@@ -86,7 +86,7 @@
       }
 
       #sign-up-log-in-button:hover, #demo-button:hover {
-        background-color: $bright-red;
+        background-color: $pink;
         cursor: pointer;
       }
     }
@@ -102,14 +102,14 @@
       background-color: rgba(0, 0, 0, 0);
       font-size: 13px;
       cursor: pointer;
-      color: $darkest-green;
+      color: $teal;
       -webkit-font-smoothing: antialiased;
     }
 
     #status-toggle:hover {
       font-weight: bolder;
       text-decoration: underline;
-      color: $darkest-green;
+      color: $teal;
     }
   }
 }
@@ -227,17 +227,3 @@
   display: block;
   padding: 8px 10px;
 }
-
-//
-
-// .auth-modal {
-//   position: fixed;
-//   top: calc(50% - 250px);
-//   left: calc(50% - 200px);
-//   width: 400px;
-//   height: 500px;
-//   border: 1px solid black;
-//   border-radius: 15px;
-//   background-color: $light-gray;
-//   box-shadow: 5px 5px gray;
-// }
