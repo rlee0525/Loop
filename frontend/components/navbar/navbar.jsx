@@ -14,7 +14,6 @@ class Navbar extends React.Component {
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
-    this.goToSignIn = this.goToSignIn.bind(this);
     this.signOut = this.signOut.bind(this);
   }
 
@@ -36,10 +35,6 @@ class Navbar extends React.Component {
 
   componentWillMount() {
     Modal.setAppElement('body');
-  }
-
-  goToSignIn() {
-    // this.props.router.push("/signup");
   }
 
   isLoggedIn() {
@@ -84,7 +79,7 @@ class Navbar extends React.Component {
           <div className="login-intro-text">
             Welcome to Loop!
           </div>
-          <SessionFormContainer />
+          <SessionFormContainer closeModal={this.closeModal} />
         </Modal>
         <section className="nav-right">
           { currentUser ? this.isLoggedIn() : this.isLoggedOut()}

@@ -1,137 +1,119 @@
-.background {
-  height: 100vh;
-  background-image: url("http://res.cloudinary.com/rlee0525/image/upload/v1488175153/tenniscourt-min_xurxdq.jpg");
-  background-size: cover;
-  background-position: center;
+.login-box {
+  display: flex;
+  position: absolute;
+  width: 600px;
+  height: 440px;
+  top: calc(50% - 220px);
+  left: calc(50% - 275px);
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
 
-  .overlay {
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+  .login-box-instruction {
+    display: flex;
+    box-sizing: border-box;
+    width: 42%;
+    padding: 20px;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $dark-red;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-sizing: border-box;
 
-    .session-form {
-      position: relative;
-      height: 100%;
-      width: 100%;
-      display: flex;
+    h1 {
+      font-size: 30px;
+      color: white;
+    }
 
-      .login-box {
-        display: flex;
-        position: absolute;
-        width: 600px;
-        height: 440px;
-        top: calc(50% - 220px);
-        left: calc(50% - 275px);
-        background: white;
-        border-radius: 5px;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+    .divide-line {
+      width: 50px;
+      border-bottom: 5px solid white;
+      padding: 10px 0 10px 0;
+    }
 
-        .login-box-instruction {
-          display: flex;
-          box-sizing: border-box;
-          width: 42%;
-          padding: 20px;
-          justify-content: center;
-          flex-direction: column;
-          background-color: $dark-red;
-          border-top-left-radius: 5px;
-          border-bottom-left-radius: 5px;
-          box-sizing: border-box;
+    p {
+      margin-top: 20px;
+      font-size: 13px;
+      line-height: 1.5em;
+      color: white;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
 
-          h1 {
-            font-size: 30px;
-            color: white;
-          }
+  .login-box-inputs {
+    display: flex;
+    box-sizing: border-box;
+    width: 58%;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top-right-radius: 5px;
+    padding-top: 30px;
 
-          .divide-line {
-            width: 50px;
-            border-bottom: 5px solid white;
-            padding: 10px 0 10px 0;
-          }
+    .errors-container {
+      height: 40px;
 
-          p {
-            margin-top: 20px;
-            font-size: 13px;
-            line-height: 1.5em;
-            color: white;
-            -webkit-font-smoothing: antialiased;
-          }
-        }
-
-        .login-box-inputs {
-          display: flex;
-          box-sizing: border-box;
-          width: 58%;
-          padding: 10px;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          border-top-right-radius: 5px;
-          padding-top: 30px;
-
-          .errors-container {
-            height: 40px;
-
-            .errors {
-              font-size: 12px;
-              padding-bottom: 5px;
-              line-height: 1.5em;
-              color: $dark-red;
-            }
-          }
-
-          .login-input-field {
-            font-size: 15px;
-            height: 30px;
-            width: 250px;
-            margin-bottom: 10px;
-            padding-left: 5px;
-          }
-
-          .buttons {
-            display: flex;
-            flex-direction: row;
-            margin: 10px 0;
-
-            #sign-up-log-in-button, #demo-button {
-              background-color: $dark-red;
-              width: 120px;
-              height: 30px;
-              margin: 0 10px;
-              color: white;
-              box-shadow: 1px 1px 1px $dark-gray;
-            }
-
-            #sign-up-log-in-button:hover, #demo-button:hover {
-              background-color: $bright-red;
-              cursor: pointer;
-            }
-          }
-
-          #question-login {
-            margin-top: 10px;
-            margin-bottom: 3px;
-            font-size: 13px;
-            -webkit-font-smoothing: antialiased;
-          }
-
-          #status-toggle {
-            background-color: rgba(0, 0, 0, 0);
-            font-size: 13px;
-            cursor: pointer;
-            color: $darkest-green;
-            -webkit-font-smoothing: antialiased;
-          }
-
-          #status-toggle:hover {
-            font-weight: bolder;
-            text-decoration: underline;
-            color: $darkest-green;
-          }
-        }
+      .errors {
+        font-size: 12px;
+        padding-bottom: 5px;
+        line-height: 1.5em;
+        color: $dark-red;
       }
+    }
+
+    .login-input-field {
+      font-size: 15px;
+      height: 30px;
+      width: 250px;
+      margin-bottom: 10px;
+      padding-left: 5px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      margin: 10px 0;
+
+      #sign-up-log-in-button, #demo-button {
+        background-color: $dark-red;
+        width: 120px;
+        height: 30px;
+        margin: 0 10px;
+        color: white;
+        box-shadow: 1px 1px 1px $dark-gray;
+      }
+
+      #sign-up-log-in-button:hover, #demo-button:hover {
+        background-color: $bright-red;
+        cursor: pointer;
+      }
+    }
+
+    #question-login {
+      margin-top: 10px;
+      margin-bottom: 3px;
+      font-size: 13px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #status-toggle {
+      background-color: rgba(0, 0, 0, 0);
+      font-size: 13px;
+      cursor: pointer;
+      color: $darkest-green;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #status-toggle:hover {
+      font-weight: bolder;
+      text-decoration: underline;
+      color: $darkest-green;
     }
   }
 }
+
 
 .signup-name {
   display: flex;
@@ -248,14 +230,14 @@
 
 //
 
-.auth-modal {
-  position: fixed;
-  top: calc(50% - 250px);
-  left: calc(50% - 200px);
-  width: 400px;
-  height: 500px;
-  border: 1px solid black;
-  border-radius: 15px;
-  background-color: $light-gray;
-  box-shadow: 5px 5px gray;
-}
+// .auth-modal {
+//   position: fixed;
+//   top: calc(50% - 250px);
+//   left: calc(50% - 200px);
+//   width: 400px;
+//   height: 500px;
+//   border: 1px solid black;
+//   border-radius: 15px;
+//   background-color: $light-gray;
+//   box-shadow: 5px 5px gray;
+// }

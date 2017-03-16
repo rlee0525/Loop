@@ -85,7 +85,7 @@ class SessionForm extends React.Component {
         return that.props.login({
           username: that.state.username,
           password: that.state.password
-        }).then(hashHistory.replace("/"));
+        }).then(that.props.closeModal);
       }
 
       setTimeout(() => {
@@ -172,53 +172,49 @@ class SessionForm extends React.Component {
     let text = this.state.loginPage ? "Sign Up" : "Login";
 
     return (
-      <div className="background">
-        <div className="overlay">
-          <div className="session-form">
-            <div className="login-box">
-              <div className="login-box-instruction">
-                <h1>MatchUp</h1>
-                <div className="divide-line"></div>
-                <p>Sign up to find your tennis partner for a match!</p>
-              </div>
-              <div className="login-box-inputs">
-                <div className="errors-container">
-                  {this.props.errors && this.renderErrors()}
-                </div>
 
-                {!this.state.loginPage && this.renderMoreInfo()}
-
-                <label>
-                  <input type="text"
-                    placeholder="Username"
-                    className="login-input-field"
-                    value={this.state.username}
-                    onChange={this.update('username')}
-                    required />
-                </label>
-
-                <label>
-                  <input type="password"
-                    placeholder="Password"
-                    className="login-input-field"
-                    value={this.state.password}
-                    onChange={this.update('password')}
-                    required />
-                </label>
-                <div className="buttons">
-                  <button id="sign-up-log-in-button" type="submit"
-                          onClick={this.handleSubmit}>{buttonText}</button>
-                  <button id ="demo-button"
-                    type="button" onClick={this.demoLogin}>DEMO</button>
-                </div>
-                <p id="question-login">{questionText}</p>
-                <button id="status-toggle"
-                        onClick={this.toggleStatus}>{text}</button>
-              </div>
-            </div>
+      <div className="login-box">
+        <div className="login-box-instruction">
+          <h1>Loop</h1>
+          <div className="divide-line"></div>
+          <p>Sign up to host or find events!</p>
+        </div>
+        <div className="login-box-inputs">
+          <div className="errors-container">
+            {this.props.errors && this.renderErrors()}
           </div>
+
+          {!this.state.loginPage && this.renderMoreInfo()}
+
+          <label>
+            <input type="text"
+              placeholder="Username"
+              className="login-input-field"
+              value={this.state.username}
+              onChange={this.update('username')}
+              required />
+          </label>
+
+          <label>
+            <input type="password"
+              placeholder="Password"
+              className="login-input-field"
+              value={this.state.password}
+              onChange={this.update('password')}
+              required />
+          </label>
+          <div className="buttons">
+            <button id="sign-up-log-in-button" type="submit"
+                    onClick={this.handleSubmit}>{buttonText}</button>
+            <button id ="demo-button"
+              type="button" onClick={this.demoLogin}>DEMO</button>
+          </div>
+          <p id="question-login">{questionText}</p>
+          <button id="status-toggle"
+                  onClick={this.toggleStatus}>{text}</button>
         </div>
       </div>
+
     );
   }
 }
