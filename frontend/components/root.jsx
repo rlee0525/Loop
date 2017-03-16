@@ -16,7 +16,7 @@ const Root = ({ store }) => {
   return (
     <Provider store={ store }>
       <Router history={ hashHistory }>
-        <Route path="/signup" component={ SessionFormContainer } />
+
         <Route path="/" component={ App }>
           <IndexRoute component={ SplashContainer } />
         </Route>
@@ -26,3 +26,5 @@ const Root = ({ store }) => {
 };
 
 export default Root;
+
+// <Route path="/signup" component={ SessionFormContainer } />

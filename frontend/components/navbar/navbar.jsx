@@ -15,7 +15,7 @@ class Navbar extends React.Component {
   }
 
   goToSignIn() {
-    this.props.router.push("/signup");
+    // this.props.router.push("/signup");
   }
 
   isLoggedIn() {

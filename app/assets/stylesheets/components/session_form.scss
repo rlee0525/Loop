@@ -245,3 +245,17 @@
   display: block;
   padding: 8px 10px;
 }
+
+//
+
+.auth-modal {
+  position: fixed;
+  top: calc(50% - 250px);
+  left: calc(50% - 200px);
+  width: 400px;
+  height: 500px;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: $light-gray;
+  box-shadow: 5px 5px gray;
+}

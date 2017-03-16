@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
+import Modal from 'react-modal';
 import FontAwesome from 'react-fontawesome';
 import Navbar from '../navbar/navbar_container';
+import SessionForm from '../session_form/session_form';
 import MainSearch from '../main_search/main_search_container';
 import Slider from 'react-slick';
 import FeaturedSlider from '../main_sliders/featured_slider';
@@ -15,6 +17,21 @@ class Splash extends React.Component {
     super(props);
 
     this.goToSignUp = this.goToSignUp.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+
+  openModal() {
+    this.redirectIfLoggedIn();
+    this.setState({ modalOpen: true });
+  }
+
+  closeModal() {
+    this.setState({ modalOpen: false });
+  }
+
+  componentWillUnmount() {
+    this.closeModal();
   }
 
   componentDidMount() {
@@ -51,6 +68,17 @@ class Splash extends React.Component {
     return (
       <div>
         <Navbar />
+
+        <Modal
+          className="auth-modal"
+          isOpen={this.state.modalOpen}
+          onRequestClose={this.closeModal}
+          contentLabel="auth-modal">
+          <div className="login-intro-text">
+            Welcome to Loop!
+          </div>
+          <SessionFormContainer />
+        </Modal>
 
         <div className="splash-page">
           <div className="splash-body">
