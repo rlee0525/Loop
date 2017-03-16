@@ -1,5 +1,5 @@
 # Loop
 
-## Redefining connection.
+Redefining connection.
 
-![Loop home](./app/assets/images/main.png)
+![Loop main](./app/assets/images/main.png)
