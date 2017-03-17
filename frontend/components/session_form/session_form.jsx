@@ -31,7 +31,7 @@ class SessionForm extends React.Component {
       [property]: e.currentTarget.value
     });
   }
-
+  
   handleSubmit(e) {
     const that = this;
     e.preventDefault();
